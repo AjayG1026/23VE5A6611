@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <title>URL Shortener</title>
 </head>
 <body>
@@ -22,69 +24,5 @@
     <footer>
         <p>&copy; 2023 URL Shortener</p>
     </footer>
-    <script>
-        document.getElementById('url-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const urlInput = document.getElementById('url-input').value;
-            const shortenedUrl = `https://short.ly/${btoa(urlInput).substring(0, 8)}`;
-            document.getElementById('shortened-url-text').textContent = shortenedUrl;
-            document.getElementById('shortened-url').classList.remove('hidden');
-        });
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        header, footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-        }
-        section {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        input[type="url"] {
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-        button {
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .hidden {
-            display: none;
-        }
-        #shortened-url {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #e9ecef;
-            border-radius: 5px;
-        }
-        #shortened-url-text {
-            font-weight: bold;
-        }
-        footer p {
-            margin: 0;
-        }
-    </style>
-</script>
 </body>
 </html>
